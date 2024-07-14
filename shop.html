@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Clothing Store - Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html">
+                <img class="logoimg" src="novalogowhite.png" alt="Nova" />
+            </a>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="dropdown">
+                <button onclick="toggleDropdown()" class="dropbtn">&#169;</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <p>&copy; 2024 Nova Clothing. All rights reserved. Site by Chris</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="shop" class="shop-section">
+        <div class="container">
+            <h2 class="section-title">Shop Now</h2>
+            <!-- Product cards or grid -->
+            <div class="product-card">
+                <img src="shirt1-transformed.png" alt="Shirt1">
+                <h3 class="shirt1">Shirt 1</h3>
+                <p class="product-description">$35</p>
+                <!--<a href="product.html" class="btn btn-secondary" onclick="showProduct('shirt1')">View</a> -->
+                <button onclick="showProduct('product1')">Product 1</button>
+            </div>
+            <div class="product-card">
+                <img src="pant1-transformed.png" alt="pant1">
+                <h3 class="pant1">Pant 1</h3>
+                <p class="product-description">$50</p>
+                <!--<a href="product.html" class="btn btn-secondary" onclick="showProduct('pant1')">View</a> -->
+                <button onclick="showProduct('product2')">Product 2</button>
+            </div>
+            <div class="product-card">
+                <img src="shoe1-transformed.png" alt="shoe1">
+                <h3 class="shoe1">shoe 1</h3>
+                <p class="product-description">$120</p>
+             <!--   <a href="product.html" class="btn btn-secondary" onclick="showProduct('shoe1')">View</a> -->
+                <button onclick="showProduct('product3')">Product 3</button>
+            </div>
+            <!-- Repeat product cards for each item -->
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p class = "copyrightproduct">&copy; 2024 Nova Clothing Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function showProduct(productId) {
+            window.location.href = `product.html?product=${productId}`;
+        }
+    </script>
+</body>
+</html>

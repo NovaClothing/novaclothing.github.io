@@ -1,0 +1,354 @@
+/* Reset and basic styles */
+@import url('https://fonts.googleapis.com/css2?family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    background-color: #393736;
+    font-family: "Wittgenstein", serif;
+    font-weight: 400;
+    font-style: normal;
+    height: 100vh; /* Ensure the body fills the viewport height */
+    overflow-y: hidden; /* Prevent vertical scrolling */
+}
+.about-section{
+    color: white;
+    text-align:center;
+    font-size: 20px;
+}
+
+button{
+    font-family: "Wittgenstein", serif;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font size: 14px;
+    cursor: pointer;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 0px 0;
+}
+
+.header .logo {
+    font-size: 2em;
+    position: relative;
+    right: 320px; 
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the left */
+    max-width: 100%; /* Ensure the container spans the full width */
+    padding: 0 4px; /* Optional: padding for spacing inside the container */
+}
+
+.logoimg {
+    width: 140px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.nav-menu ul {
+    display: flex; /* Align items horizontally */
+    list-style-type: none;
+    padding-left: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    margin-left: 20px; /* Add spacing between logo and nav menu */
+}
+
+.nav-menu ul li {
+    margin: 0 10px; /* Space between nav items */
+}
+
+.dropdown {
+    margin-left: 1300px; /* Add space between nav menu and dropdown */
+}
+
+.nav-menu ul {
+    list-style-type: none;
+}
+
+.nav-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: .9em;
+}
+.nav-menu ul li a:hover { 
+    color: darkgray;
+    font-size: .91em;
+    transition: 1s all ease;
+}
+
+/* Home Page specific styles */
+.home-section {
+    position: relative;
+    min-height: 100vh; /* Set the minimum height to fill the viewport */
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+    background-image: url('image1.jpg');
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.home-section .container {
+    position: relative; /* Ensure proper stacking of content within the hero section */
+}
+
+.home-section .hero-title {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: Add text shadow for better readability */
+}
+
+/* General button style */
+.btn {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+.btn-primary {
+    background-color: #ff6600;
+}
+
+.btn-secondary {
+    background-color: #333;
+}
+
+/* Dropdown button and content */
+.dropbtn {
+    background-color: transparent;
+    color: #fff; /* Adjust text color */
+    font-size: 1.5em;
+    border: none;
+    cursor: pointer;
+    height: 40px; /* Adjust the height as needed */
+    padding: 0 10px; /* Adjust the padding inside the button */
+    line-height: 40px; /* Center the text vertically */
+}
+
+.dropbtn:hover {
+    color: #aaa; /* Adjust hover color */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    float: right; /* Align to the right */
+    margin-right: 10px; /* Adjust margin as needed */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 260px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+}
+
+.dropdown-content p {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: black;
+    text-align: center;
+}
+
+.show {
+    display: block;
+}
+
+.shopnowbtn {
+  font-family: "Wittgenstein", serif;
+  background-color: transparent; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 11px;
+}
+.shopnowbtn:hover{
+    cursor: pointer;
+    font-size: 22px;
+    transition: .4s all ease;
+}
+
+/* Ensure responsiveness and adjust layout at different screen sizes */
+
+/* For screens smaller than 768px (e.g., tablets and mobile phones) */
+@media (max-width: 768px) {
+    .header .container {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .dropdown {
+        margin-left: 10px; /* Adjust margin for smaller screens */
+    }
+
+    .dropdown-content {
+        min-width: 160px; /* Adjust minimum width for smaller screens */
+    }
+}
+
+/* For screens larger than 768px */
+@media (min-width: 769px) {
+    .header .container {
+        padding: 4px; /* Default padding for larger screens */
+    }
+
+    .dropdown {
+        margin-left: 1300px; /* Default margin for larger screens */
+    }
+
+    .dropdown-content {
+        min-width: 260px; /* Default minimum width for larger screens */
+    }
+}
+
+/* Shop Page specific styles */
+/* Shop Page specific styles */
+.shop-section {
+    padding: 60px 0;
+    text-align: center; /* Center text within the section */
+}
+
+.shop-section .section-title {
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom: 40px;
+    width: 100%; /* Ensure the title spans the full width */
+    text-align: center; /* Center the text */
+}
+
+.shop-section .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the product cards */
+}
+
+.btncontainer{
+  display: flex;
+            justify-content: center;
+            align-items: center;
+      
+}
+.backbutton{
+     display: block;
+            margin-left: auto;
+            margin-right: auto;
+    
+    left: 50px;
+    color: black;
+    border-style: solid;
+    border-radius: 20px;
+    background-color: white;
+    
+}
+.backbutton:hover{
+    cursor: pointer;
+    color: aquamarine;
+    transition: .4s all ease;
+}
+.product-card {
+    background-color: #444;
+    border-radius: 10px;
+    overflow: hidden;
+    width: calc(33.333% - 20px); /* 3 columns layout with space between */
+    max-width: 300px;
+    text-align: center;
+    color: #fff;
+    height: 350px; /* Set a fixed height for product cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    max-height: 200px; /* Adjust the max height of the images */
+    object-fit: contain; /* Ensure the images fit within the given space */
+    padding-top: 14px;
+}
+
+.product-card .product-title {
+    font-size: 1.5em;
+    margin: 15px 0;
+}
+
+.product-card .product-description {
+    font-size: 1em;
+    margin: 10px 0;
+    flex-grow: 1; /* Allow the description to grow and fill space */
+}
+
+.product-card .btn-secondary {
+    margin-bottom: 15px;
+    padding: 10px 20px;
+}
+.product {
+            color: antiquewhite;
+            border: none;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+        }
+        .product img {
+            width: 450px;
+             display: block;
+    margin-left: auto;
+    margin-right: auto;
+            
+        }
+.copyrightproduct{
+    position: fixed; /* Stays at the same position regardless of scrolling */
+    bottom: 0; /* Aligns the bottom of the element with the bottom of the viewport */
+    left: 50%; /* Moves the element's left edge to the center of the viewport */
+    transform: translateX(-50%); /* Centers the element horizontally by shifting it left by half of its width */
+    text-align: center; /* Centers the text inside the div */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .product-card {
+        width: calc(50% - 20px); /* 2 columns layout on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        width: calc(100% - 20px); /* 1 column layout on very small screens */
+    }
+}
